@@ -40,6 +40,7 @@ public class RequestRunnerTest {
 	}
 	
 	
+	//Warning - this will run the actual API
 	@Test
 	public void getAlbumPhotosTest() {
 		RequestRunner instance = RequestRunner.getInstance();
