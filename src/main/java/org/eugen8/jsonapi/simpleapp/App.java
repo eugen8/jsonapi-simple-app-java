@@ -23,11 +23,8 @@ public class App {
 	public static final String PROXY_CONF_FILE = "proxy.conf";
 
 	public static void main(String[] args) {
-		Integer albumId = parseAgs(args);
-		if(albumId!=null) {
-			RequestRunner runner = RequestRunner.getInstance();
-			runner.printAlbumPhotos(albumId);
-		}
+		parseAgs(args);
+		
 		
 	}
 
