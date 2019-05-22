@@ -7,8 +7,32 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+	
+	
+    @Test 
+    public void parseArgsReturnsArgumentId() {
+    	
+    	Integer albumId = App.parseAgs(new String[] {"42"});
+    	
+    	assertEquals(Integer.valueOf(42), albumId);
+    	
     }
+    @Test
+    public void parseArgsReturnsNullIfVersionOrHelp() {
+
+    	Integer albumId = App.parseAgs(new String[] {"-version"});
+    	assertNull(albumId);
+
+    	albumId = App.parseAgs(new String[] {"-help"});
+    	assertNull(albumId);
+    	
+
+    	albumId = App.parseAgs(new String[] {"-help", "42"});
+    	assertNull("When using help and argument it should not parse the argument", albumId);
+    	
+    	assertNull("When using version and argument, it should not parse the argument", App.parseAgs(new String[] {"-version", "42"}));
+    }
+    
+    
+    
 }
