@@ -67,3 +67,6 @@ Example output:
 	[2098] et libero excepturi
 	[2099] magnam neque quas voluptatibus
 	[2100] et enim sed minima ut
+	
+	
+This has been tested with Java 11 and previously with Java 8. 
