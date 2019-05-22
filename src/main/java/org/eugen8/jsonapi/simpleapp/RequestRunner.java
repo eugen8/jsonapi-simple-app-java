@@ -51,7 +51,7 @@ public class RequestRunner {
 	 * @param albumPhotos of ListOfPhotos type
 	 * @return
 	 */
-	private String formatPhotoList(ListOfPhotos albumPhotos) {
+	protected String formatPhotoList(ListOfPhotos albumPhotos) {
 		StringBuilder sb = new StringBuilder();
 		for (Photo photo : albumPhotos) {
 			sb.append(String.format("[%s] %s", photo.getId(), photo.getTitle()));

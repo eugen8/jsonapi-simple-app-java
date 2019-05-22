@@ -21,6 +21,8 @@ import java.util.stream.Stream;
  */
 public class ListOfPhotos extends AbstractCollection<Photo> {
 	
+	
+
 	private List<Photo> photos = new ArrayList<Photo>();
 
 	public void forEach(Consumer<? super Photo> action) {
@@ -158,6 +160,14 @@ public class ListOfPhotos extends AbstractCollection<Photo> {
 	public Iterator<Photo> iterator() {
 		return photos.iterator();
 	}
+
+	@Override
+	public String toString() {
+		final int maxLen = 3;
+		return "ListOfPhotos [" + (photos != null ? "photos=" + photos.subList(0, Math.min(photos.size(), maxLen)) : "")
+				+ "]";
+	}
+
 
 
 
