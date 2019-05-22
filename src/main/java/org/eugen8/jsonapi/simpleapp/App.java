@@ -3,15 +3,23 @@
  */
 package org.eugen8.jsonapi.simpleapp;
 
-public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+import java.sql.Array;
+import java.util.Arrays;
 
+public class App {
+   
     public static void main(String[] args) {
 
     	
+
+    
+    }
+    
+    
+    protected static Integer parseAgs(String[] args) {
+    	String albumNumberStr = null;
+    	Integer albumId = null;
     	
-        System.out.println(new App().getGreeting());
+    	return albumId;
     }
 }

@@ -10,6 +10,7 @@
   <name>photo-album</name>
   <url>https://github.com/eugen8/jsonapi-simple-app-java</url>
   
+  
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -72,8 +73,7 @@
   
   
   
-  <!--mvn clean compile assembly:single
-  run with: java -jar photo-album-1.0-SNAPSHOT-jar-with-dependencies.jar  -->
+  <!--mvn clean compile assembly:single -->
   <build>
   <plugins>
     <plugin>
@@ -87,9 +87,24 @@
         <descriptorRefs>
           <descriptorRef>jar-with-dependencies</descriptorRef>
         </descriptorRefs>
+        <finalName>photo-album</finalName>
+         <appendAssemblyId>false</appendAssemblyId>
       </configuration>
     </plugin>
-  </plugins>
+  
+  
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>2.3.2</version>
+    <configuration>
+        <finalName>photo-album</finalName>                   
+    </configuration>
+  </plugin>       
+
+
+</plugins>
+  
 </build>
   
   
