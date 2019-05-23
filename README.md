@@ -13,6 +13,8 @@ You can run the application with :
 
 You can also run the App directly from your Java editor, providing the configurations or argument accordingly
 
+The app also allow to pass some options, run with option -help for details
+
 Example output:
 
 	>java -jar target/photo-album.jar 42
