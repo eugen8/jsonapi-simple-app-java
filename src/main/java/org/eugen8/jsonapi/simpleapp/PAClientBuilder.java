@@ -71,3 +71,9 @@ public class PAClientBuilder {
 	}
 
 }
+
+	//after looking at these resources and not being able to replicate thier solution, from the source code was able to 
+	//understand how proxy can be implemented. Probably should reply to these questions to help out:
+	//https://stackoverflow.com/questions/10415607/jersey-client-set-proxy
+//https://stackoverflow.com/questions/33872492/configuring-proxy-for-jax-rs-2-0-client-api
+//https://stackoverflow.com/questions/7648827/jersey-list-of-json-objects
